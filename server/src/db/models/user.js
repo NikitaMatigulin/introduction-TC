@@ -4,6 +4,12 @@ module.exports = (sequelize, DataTypes) => {
   class User extends Model {
     static associate(models) {
       User.hasMany(models.Post, { foreignKey: "user_id" });
+      User.hasMany(models.Favorite, { foreignKey: "user_id" });
+      User.belongsToMany(models.Post, {
+        through: models.Favorite,
+        foreignKey: "user_id",
+        otherKey: "post_id",
+      });
     }
   }
   User.init(
