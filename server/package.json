@@ -10,8 +10,7 @@
     "undoSeed": "npx sequelize db:seed:all",
     "createDB": "npx sequelize db:create",
     "dropDB": "npx sequelize db:drop",
-    "db": "npx sequelize db:drop && npx sequelize db:create && npx sequelize db:migrate && sleep 2 && npx sequelize db:seed:all && npm run dev",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "db": "npx sequelize db:drop && npx sequelize db:create && npx sequelize db:migrate && sleep 2 && npx sequelize db:seed:all && npm run dev"
   },
   "keywords": [],
   "author": "",
